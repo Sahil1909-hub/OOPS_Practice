@@ -24,7 +24,7 @@ class chatbook:
         elif user_input == "4":
             self.mssge_friend()
         else:
-            pass
+            exit()
 
 
     def signup(self):
@@ -38,7 +38,7 @@ class chatbook:
 
     def signin(self):
         if self.username == '' and self.password == '':
-            print('Please signup first by pressing 1')
+            print('Please signup first by pressing 1 in the menu')
             self.menu()
         else:
             uname = input('Enter your username/email here: ')
@@ -51,7 +51,7 @@ class chatbook:
     def my_post(self):
         if self.loggedin == True:
             post_mssge = input('Enter your post message here: ')
-            print(f'Your message of {post_mssge}.... has been posted successfully')
+            print(f'Following content has been posted -->', post_mssge)
             print('Would you like to message your friend..?')
             print('\n')
             self.menu()
